@@ -1,4 +1,7 @@
 .DS_Store
 
+/edgetpu_runtime_20221024.zip
+
+/edgetpu_runtime/
 /pycoral/
 /test_data/

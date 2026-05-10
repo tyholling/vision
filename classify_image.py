@@ -38,10 +38,13 @@ def main():
     else:
         common.set_input(interpreter, image)
 
-    start = time.perf_counter()
-    interpreter.invoke()
-    elapsed = time.perf_counter() - start
-    print('\n%.1fms' % (elapsed * 1000))
+    print()
+    for _ in range(5):
+        start = time.perf_counter()
+        interpreter.invoke()
+        elapsed = time.perf_counter() - start
+        print('%7.4f ms' % (elapsed * 1000))
+    print()
 
     classes = classify.get_classes(interpreter, 5, 0)
     for c in classes:
